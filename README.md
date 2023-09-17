@@ -43,7 +43,7 @@ ____________________________________________________________
 ### REFERENCES / RESOURCES
 
 - Regional map - https://www.mappr.co/political-maps/us-regions-map/
-
+- TRI file documentation descriptions - https://www.epa.gov/system/files/documents/2022-10/TRI_Basic_Data_File_Documentation_RY2021_102522.pdf
 ____________________________________________________________
 
 ### ANALYSIS
@@ -57,3 +57,8 @@ ____________________________________________________________
 ____________________________________________________________
 
 ### CONCLUSION
+
+
+### NOTES/QUESTIONS:
+ 
+Can we add the 'SRS ID' column to the list we keep?
