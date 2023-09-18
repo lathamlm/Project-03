@@ -15,9 +15,7 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="space-small"></div>
-        </div>
+        <div class="row space-small"></div>
         <div class="row">
             <!-- THE DIV THAT HOLDS THE TITLE-->
             <div class="col-md-10 title-heading text-center">
@@ -25,41 +23,47 @@
                 <p>Explore this dashboard and delve into toxic release trends in the United States</p>
             </div>
         </div>
-        <div class="row">
-            <div class="space"></div>
-        </div>
+        <div class="row space"></div>
         <div class="row">
         <!-- THE DIV THAT HOLDS THE MAP-->
             <div id="map"></div>
         </div>
-        <div class="row">
-            <div class="space-large"></div>
+        <div class="row space-large"></div>
+        <div class="row choices">
+            <div class="dropdown company">
+                <h4>Parent Company Name:
+                <select id="selDataset-1" onchange="optionChanged(this.value)"></select></h4>
+            </div>
+            <div class="space"></div>
+            <div class="dropdown region">
+                <h4>Region:
+                <select id="selDataset-2" onchange="optionChangedTwo(this.value)"></select></h4>
+            </div>
         </div>
-        <div class="row">
+        <div class="row space"></div>
+        <div class="row table">
             <!-- THE DIV THAT HOLDS THE CO. NAME DROPDOWN-->
-            <div class="col-md-4">
-                <div class="dropdown">
-                    <h4>Parent Company Name:</h4>
-                    <select id="selDataset-1" onchange="optionChanged(this.value)"></select>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Summary:</h4>
                 </div>
-                <div class="space-small"></div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Summary:</h4>
-                    </div>
-                    <div id="chemical-list" class="panel-body">
-                        <ul style="list-style-type: none;"></ul>
-                    </div>
+                <div id="summary-list" class="panel-body">
+                    <ul style="list-style-type: none;"></ul>
                 </div>
             </div>
-            <!-- THE DIV THAT HOLDS THE CHEMICAL PIE CHART-->
+        </div>
+        <div class="row space-special"></div>
+        <div class="row">
+            <!-- THE DIV THAT HOLDS THE CHEMICAL BUBBLE CHART-->
             <div class="col-md-6">
                 <!-- BREAKDOWN BETWEEN ON SITE, OFF SITE, RECYCLING-->
-                <div id="chem-pie">
-                    <canvas id="chart-chem-pie"></canvas>
+                <div id="chem-bubble">
+                    <canvas id="chart-chem-bubble"></canvas>
                 </div>
             </div>
-            <div class="space-special"></div>
+        </div>
+        <div class="row space-special"></div>
+        <div class="row">
             <div class="col-md-6">
                 <!-- BREAKDOWN BETWEEN ON SITE, OFF SITE, RECYCLING-->
                 <div id="dump-pie">
@@ -67,23 +71,8 @@
                 </div>
             </div>
         </div>
-        <div class="space-large"></div>
+        <div class="row space-special"></div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="dropdown region">
-                    <h4>Region:</h4>
-                    <select id="selDataset-2" onchange="optionChangedTwo(this.value)"></select>
-                </div>
-                <div class="space-small"></div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Summary:</h4>
-                    </div>
-                    <div id="summary-list" class="panel-body">
-                        <ul style="list-style-type: none;"></ul>
-                    </div>
-                </div>
-            </div>
             <!-- THE DIV THAT HOLDS THE REGION BAR CHART-->
             <div class="col-md-7">
                 <div id="state-bar"></div>

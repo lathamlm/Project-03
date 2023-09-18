@@ -1,6 +1,6 @@
 .title-heading {
     height: 90px;
-    width: 1150px;
+    max-width: 85%;
     /* REFERENCED https://www.w3schools.com/css/css_align.asp */
     margin: auto;
     text-align: center;
@@ -8,20 +8,21 @@
 }
 
 #map {
-    height: 400px;
-    width: 1100px;
+    height: 500px;
+    max-width: 85%;
     padding: 10px 10px;
     /* REFERENCED https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,not%20define%20the%20border%20style. */
     border: 2px solid black;
     margin: auto;
     box-shadow: 0 0 15px black;
 }
+
 .space-small{
     height: 10px;
 }
 
 .space {
-    height: 20px;
+    height: 35px;
 }
 
 .space-large {
@@ -29,48 +30,64 @@
 }
 
 .space-special {
-    height: 50px;
-    /* REFERENCED https://stackoverflow.com/questions/62475991/how-to-write-an-app-layout-in-dash-such-that-two-graphs-are-side-by-side */
-    display: inline-block;
+    height: 70px;
 }
+/* REFERENCED https://stackoverflow.com/questions/61637178/how-to-center-multiple-figure-elements-in-one-row*/
+.choices {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* END OF REFERENCED CODE*/
 
 .col-md-1 {
     margin: auto;
     text-align: center
 }
 
-.col-md-4 {
-    height: 500px;
-    width: 265px;
-    vertical-align: top;
-    display: inline-block;
-}
-
-.col-md-6 {
+#chem-bubble {
     height: 450px;
-    width: 450px;
-    display: inline-block;
+    max-width: 85%;
     border: 2px solid black;
     margin: auto;
     box-shadow: 0 0 10px black;
 }
 
-.col-md-7 {
+#dump-pie {
     height: 450px;
-    width: 910px;
-    display: inline-block;
+    max-width: 85%;
     border: 2px solid black;
     margin: auto;
     box-shadow: 0 0 10px black;
 }
 
-.dropdown {
+#state-bar {
+    height: 450px;
+    max-width: 85%;
+    border: 2px solid black;
+    margin: auto;
+    box-shadow: 0 0 10px black;
+}
+
+.region {
     border: 1px solid darkslategrey;
     box-shadow: 0 0 8px darkslateblue;
-    width: 200px;
+    height: 60px;
+    width: 275px;
     border-radius: 5px;
     padding: 10px 10px;
-    margin: auto;
+    margin: 0 10px;
+}
+
+.company {
+    border: 1px solid darkslategrey;
+    box-shadow: 0 0 8px darkslateblue;
+    height: 60px;
+    width: 450px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 0 10px;
 }
 
 #selDataset-1 {
@@ -81,8 +98,8 @@
 .panel {
     border: 1px solid darkslategrey;
     box-shadow: 0 0 8px darkslateblue;
-    height: 320px;
-    width: 200px;
+    height: 100px;
+    max-width: 85%;
     border-radius: 5px;
     padding: 10px 10px;
     margin: auto;
