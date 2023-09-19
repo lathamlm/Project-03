@@ -37,13 +37,22 @@ ____________________________________________________________
 
 ### INCLUDED IN THIS REPOSITORY:
 
+- Output folder
+- Path folder
 - Resources folder
+- cleaning_data.ipynb
+- index.html
+- presentation.pptx
 ____________________________________________________________
 
 ### REFERENCES / RESOURCES
 
 - Regional map - https://www.mappr.co/political-maps/us-regions-map/
 - TRI file documentation descriptions - https://www.epa.gov/system/files/documents/2022-10/TRI_Basic_Data_File_Documentation_RY2021_102522.pdf
+- CSS aligning - https://www.w3schools.com/css/css_align.asp
+- Borders - https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,not%20define%20the%20border%20style
+- Combine elements in single row - https://stackoverflow.com/questions/61637178/how-to-center-multiple-figure-elements-in-one-row
+
 ____________________________________________________________
 
 ### ANALYSIS
@@ -58,7 +67,3 @@ ____________________________________________________________
 
 ### CONCLUSION
 
-
-### NOTES/QUESTIONS:
- 
-Can we add the 'SRS ID' column to the list we keep?
