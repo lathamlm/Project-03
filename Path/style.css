@@ -1,0 +1,111 @@
+.title-heading {
+    height: 90px;
+    max-width: 85%;
+    /* REFERENCED https://www.w3schools.com/css/css_align.asp */
+    margin: auto;
+    text-align: center;
+    padding: 0 30px;
+}
+
+#map {
+    height: 500px;
+    max-width: 85%;
+    padding: 10px 10px;
+    /* REFERENCED https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,not%20define%20the%20border%20style. */
+    border: 2px solid black;
+    margin: auto;
+    box-shadow: 0 0 15px black;
+}
+
+.space-small{
+    height: 10px;
+}
+
+.space {
+    height: 35px;
+}
+
+.space-large {
+    height: 125px;
+}
+
+.space-special {
+    height: 70px;
+}
+/* REFERENCED https://stackoverflow.com/questions/61637178/how-to-center-multiple-figure-elements-in-one-row*/
+.choices {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* END OF REFERENCED CODE*/
+
+.col-md-1 {
+    margin: auto;
+    text-align: center
+}
+
+#chem-bubble {
+    height: 450px;
+    max-width: 85%;
+    border: 2px solid black;
+    margin: auto;
+    box-shadow: 0 0 10px black;
+}
+
+#dump-pie {
+    height: 450px;
+    max-width: 85%;
+    border: 2px solid black;
+    margin: auto;
+    box-shadow: 0 0 10px black;
+}
+
+#state-bar {
+    height: 450px;
+    max-width: 85%;
+    border: 2px solid black;
+    margin: auto;
+    box-shadow: 0 0 10px black;
+}
+
+.region {
+    border: 1px solid darkslategrey;
+    box-shadow: 0 0 8px darkslateblue;
+    height: 60px;
+    width: 275px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 0 10px;
+}
+
+.company {
+    border: 1px solid darkslategrey;
+    box-shadow: 0 0 8px darkslateblue;
+    height: 60px;
+    width: 450px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 0 10px;
+}
+
+#selDataset-1 {
+    width: 200px;
+    padding: 3px 3px;
+}
+
+.panel {
+    border: 1px solid darkslategrey;
+    box-shadow: 0 0 8px darkslateblue;
+    height: 100px;
+    max-width: 85%;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: auto;
+}
+
+#selDataset-2 {
+    width: 200px;
+    padding: 3px 3px;
+}
