@@ -37,12 +37,23 @@ ____________________________________________________________
 
 ### INCLUDED IN THIS REPOSITORY:
 
-- Output folder
-- Path folder
-- Resources folder
-- cleaning_data.ipynb
-- index.html
-- presentation.pptx
+- Output folder containing the following:
+    - 4 .csv files created from Jupyter Notebook cleaning (to be used for SQL database)
+    - Json folder containing JSON formatted files for reference
+- Path folder containing the following:
+    - logic.js - for chart/map creation
+    - style.css - for formatting
+- Resources folder containing the following:
+    - 2021_us.csv file - original data source from EPA
+    - tri_documentation.pdf - information on column titles/contents
+    - us-regions-map.jpg - for reference for regional divisions
+- cleaning_data.ipynb - Jupyter Notebook which narrows and cleans data
+- flask_app.py - Flask API for cleaned data
+- index.html - html to present dashboard
+- presentation.pptx - for class presentation
+- schema.sql - SQL table schema
+- tri_database.sqlite - sqlite file for Flask
+
 ____________________________________________________________
 
 ### REFERENCES / RESOURCES
@@ -52,6 +63,7 @@ ____________________________________________________________
 - CSS aligning - https://www.w3schools.com/css/css_align.asp
 - Borders - https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,not%20define%20the%20border%20style
 - Combine elements in single row - https://stackoverflow.com/questions/61637178/how-to-center-multiple-figure-elements-in-one-row
+- Creating a SQLITE file - https://sqlitebrowser.org/dl/ and https://datacarpentry.org/sql-socialsci/02-db-browser.html
 
 ____________________________________________________________
 
