@@ -33,7 +33,7 @@ def welcome():
     return(
         f"<h3>Available Routes:</h3><br/>"
         f"<br/>"
-        f"<strong>This route contains the locations of all toxic releases in 2021:</strong><br/>"
+        f"<strong>This route contains the locations of all toxic releases in 2021 (FOR MAP):</strong><br/>"
         f"<p style='color:Tomato;'>/api/location</p>"
         f"<br/>"
         f"<strong>This route contains the values of all toxic releases in 2021:</strong><br/>"
@@ -54,23 +54,22 @@ def welcome():
 def location():
     session = Session(engine)
 
-    results = session.query(Tri_data.DOCUMENT_NUMBER, Tri_data.FACILITY_NAME, Tri_data.PARENT_COMPANY_NAME, Tri_data.STATE, Tri_data.REGION, Tri_data.LATITUDE, Tri_data.LONGITUDE, Tri_data.FEDERAL_FACILITY, Tri_data.TRIBAL_LAND).all()
+    results = session.query(Tri_data.DOCUMENT_NUMBER, Tri_data.FACILITY_NAME, Tri_data.PARENT_COMPANY_NAME, Tri_data.LATITUDE, Tri_data.LONGITUDE, Tri_data.FEDERAL_FACILITY, Tri_data.CARCINOGEN, Tri_data.ON_SITE_RELEASE_TOTAL, Tri_data.INDUSTRY_SECTOR_CODE).all()
     
     session.close()
 
     location_list = []
-    for DOCUMENT_NUMBER, FACILITY_NAME, PARENT_COMPANY_NAME, STATE, REGION, LATITUDE, LONGITUDE, FEDERAL_FACILITY, TRIBAL_LAND in results:
+    for DOCUMENT_NUMBER, FACILITY_NAME, PARENT_COMPANY_NAME, LATITUDE, LONGITUDE, FEDERAL_FACILITY, CARCINOGEN, ON_SITE_RELEASE_TOTAL, INDUSTRY_SECTOR_CODE in results:
         location_dict = {}
         location_dict["Document number"] = DOCUMENT_NUMBER
         location_dict["Facility Name"] = FACILITY_NAME
         location_dict["Parent Company Name"] = PARENT_COMPANY_NAME
-        location_dict["State"] = STATE
-        location_dict["Region"] = REGION
         location_dict["Latitude"] = LATITUDE
         location_dict["Longitude"] = LONGITUDE
-        location_dict["Longitude"] = LONGITUDE
         location_dict["Federal Facility"] = FEDERAL_FACILITY
-        location_dict["Tribal Land"] = TRIBAL_LAND
+        location_dict["Carcinogen"] = CARCINOGEN
+        location_dict["On-site Release Total"] = ON_SITE_RELEASE_TOTAL
+        location_dict["Industry Sector Code"] = INDUSTRY_SECTOR_CODE
         location_list.append(location_dict)        
 
     return jsonify(location_list)
@@ -80,14 +79,16 @@ def location():
 def values():
     session = Session(engine)
 
-    results = session.query(Tri_data.DOCUMENT_NUMBER, Tri_data.INDUSTRY_SECTOR_CODE, Tri_data.SRS_ID, Tri_data.METAL_CATEGORY, Tri_data.CARCINOGEN, Tri_data.ON_SITE_RELEASE_TOTAL, Tri_data.OFF_SITE_RELEASE_TOTAL, Tri_data.OFF_SITE_RECYCLED_TOTAL, Tri_data.ONE_TIME_RELEASE, Tri_data.UNIT_OF_MEASURE).all()
+    results = session.query(Tri_data.DOCUMENT_NUMBER, Tri_data.REGION, Tri_data.TRIBAL_LAND, Tri_data.INDUSTRY_SECTOR_CODE, Tri_data.SRS_ID, Tri_data.METAL_CATEGORY, Tri_data.CARCINOGEN, Tri_data.ON_SITE_RELEASE_TOTAL, Tri_data.OFF_SITE_RELEASE_TOTAL, Tri_data.OFF_SITE_RECYCLED_TOTAL, Tri_data.ONE_TIME_RELEASE).all()
     
     session.close()
 
     tridata_list = []
-    for DOCUMENT_NUMBER, INDUSTRY_SECTOR_CODE, SRS_ID, METAL_CATEGORY, CARCINOGEN, ON_SITE_RELEASE_TOTAL, OFF_TOTAL_RELEASE_TOTAL, OFF_SITE_RECYCLED_TOTAL, ONE_TIME_RELEASE, UNIT_OF_MEASURE in results:
+    for DOCUMENT_NUMBER, REGION, TRIBAL_LAND, INDUSTRY_SECTOR_CODE, SRS_ID, METAL_CATEGORY, CARCINOGEN, ON_SITE_RELEASE_TOTAL, OFF_TOTAL_RELEASE_TOTAL, OFF_SITE_RECYCLED_TOTAL, ONE_TIME_RELEASE in results:
         tridata_dict = {}
         tridata_dict["Document Number"] = DOCUMENT_NUMBER
+        tridata_dict["Region"] = REGION
+        tridata_dict["Tribal Land"] = TRIBAL_LAND
         tridata_dict["Industry Sector Code"] = INDUSTRY_SECTOR_CODE
         tridata_dict["SRS ID"] = SRS_ID
         tridata_dict["Metal Category"] = METAL_CATEGORY
@@ -96,7 +97,6 @@ def values():
         tridata_dict["Off-site Release Total"] = OFF_TOTAL_RELEASE_TOTAL
         tridata_dict["Off-site Recycled Total"] = OFF_SITE_RECYCLED_TOTAL
         tridata_dict["One-time Release"] = ONE_TIME_RELEASE
-        tridata_dict["Unit of Measure"] = UNIT_OF_MEASURE
         tridata_list.append(tridata_dict)        
 
     return jsonify(tridata_list)
