@@ -1,0 +1,70 @@
+[
+  {
+    "INDUSTRY_SECTOR_CODE": 311,
+    "INDUSTRY_SECTOR": "Food"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 321,
+    "INDUSTRY_SECTOR": "Wood Products"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 322,
+    "INDUSTRY_SECTOR": "Paper"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 324,
+    "INDUSTRY_SECTOR": "Petroleum"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 325,
+    "INDUSTRY_SECTOR": "Chemicals"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 326,
+    "INDUSTRY_SECTOR": "Plastics and Rubber"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 327,
+    "INDUSTRY_SECTOR": "Nonmetallic Mineral Product"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 331,
+    "INDUSTRY_SECTOR": "Primary Metals"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 332,
+    "INDUSTRY_SECTOR": "Fabricated Metals"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 333,
+    "INDUSTRY_SECTOR": "Machinery"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 334,
+    "INDUSTRY_SECTOR": "Computers and Electronic Products"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 335,
+    "INDUSTRY_SECTOR": "Electrical Equipment"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 562,
+    "INDUSTRY_SECTOR": "Hazardous Waste"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 999,
+    "INDUSTRY_SECTOR": "Other"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 2211,
+    "INDUSTRY_SECTOR": "Electric Utilities"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 4246,
+    "INDUSTRY_SECTOR": "Chemical Wholesalers"
+  },
+  {
+    "INDUSTRY_SECTOR_CODE": 4247,
+    "INDUSTRY_SECTOR": "Petroleum Bulk Terminals"
+  }
+]

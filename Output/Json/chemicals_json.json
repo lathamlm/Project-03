@@ -1,0 +1,98 @@
+[
+  {
+    "SRS_ID": 4283,
+    "CHEMICAL": "Methanol"
+  },
+  {
+    "SRS_ID": 13326,
+    "CHEMICAL": "Naphthalene"
+  },
+  {
+    "SRS_ID": 16261,
+    "CHEMICAL": "1,2,4-Trimethylbenzene"
+  },
+  {
+    "SRS_ID": 19406,
+    "CHEMICAL": "Ethylbenzene"
+  },
+  {
+    "SRS_ID": 19414,
+    "CHEMICAL": "Styrene"
+  },
+  {
+    "SRS_ID": 24257,
+    "CHEMICAL": "Ethylene glycol"
+  },
+  {
+    "SRS_ID": 25452,
+    "CHEMICAL": "Toluene"
+  },
+  {
+    "SRS_ID": 26740,
+    "CHEMICAL": "n-Hexane"
+  },
+  {
+    "SRS_ID": 40576,
+    "CHEMICAL": "Benzo[g,h,i]perylene"
+  },
+  {
+    "SRS_ID": 84970,
+    "CHEMICAL": "Xylene (mixed isomers)"
+  },
+  {
+    "SRS_ID": 149583,
+    "CHEMICAL": "Lead"
+  },
+  {
+    "SRS_ID": 149625,
+    "CHEMICAL": "Manganese"
+  },
+  {
+    "SRS_ID": 149674,
+    "CHEMICAL": "Nickel"
+  },
+  {
+    "SRS_ID": 150060,
+    "CHEMICAL": "Chromium"
+  },
+  {
+    "SRS_ID": 150086,
+    "CHEMICAL": "Copper"
+  },
+  {
+    "SRS_ID": 152389,
+    "CHEMICAL": "Ammonia"
+  },
+  {
+    "SRS_ID": 152686,
+    "CHEMICAL": "Nitric acid"
+  },
+  {
+    "SRS_ID": 649541,
+    "CHEMICAL": "Certain glycol ethers"
+  },
+  {
+    "SRS_ID": 649616,
+    "CHEMICAL": "Nitrate compounds (water dissociable; reportable only when in aqueous solution)"
+  },
+  {
+    "SRS_ID": 649699,
+    "CHEMICAL": "Zinc compounds"
+  },
+  {
+    "SRS_ID": 649715,
+    "CHEMICAL": "Diisocyanates"
+  },
+  {
+    "SRS_ID": 649749,
+    "CHEMICAL": "Polycyclic aromatic compounds"
+  },
+  {
+    "SRS_ID": 650002,
+    "CHEMICAL": "Lead  And Lead Compounds"
+  },
+  {
+    "SRS_ID": 650010,
+    "CHEMICAL": "Manganese compounds"
+  }
+]

@@ -1,3 +1,12 @@
+locationUrl = "http://127.0.0.1:5000/api/"
+d3.json(locationUrl + "location").then(function(data) {
+    console.log("location:", data)
+});
+
+/*d3.json(locationUrl + "values").then(function(data) {
+    console.log("values:", data)
+});*/
+
 let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
