@@ -1,5 +1,7 @@
 locationUrl = "http://127.0.0.1:5000/api/"
 
+console.log(regionData)
+
 d3.json(locationUrl + "location").then(function(data) {
     console.log("location:", data[0])
 
@@ -147,15 +149,4 @@ d3.json(locationUrl + "location").then(function(data) {
 
 });
 
-/*d3.json(locationUrl + "values").then(function(data) {
-    console.log("values:", data[0])
-
-    let regionsList = [];
-    let regionOnly = [];
-    let count = 0;
-    let start = false;
-
-    for(let i=0; i<data.length; i++) {
-        regionsList.push(data[i].Region)
-    };
-});*/
+//for(let m=0; m<length)
