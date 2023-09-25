@@ -74,7 +74,9 @@
         <div class="row">
             <!-- THE DIV THAT HOLDS THE REGION BAR CHART-->
             <div class="col-md-7">
-                <div id="state-bar"></div>
+                <div id="state-bar-chart-container">
+                    <canvas id="state-bar-chart"></canvas>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -84,16 +86,109 @@
         </div>
     </div>
 
-    <!-- D3 -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- PLOTLY -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <!-- LEAFLET -->
+    <!-- Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
-    <!-- JS FILE -->
-    <script src="Path/logic.js"></script>
-    <!-- <script src="flask_app.py"></script> -->
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Your JavaScript Code -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sample data for total amount dumped per state
+        const stateData = [
+            { state: 'Alaska', totalDumped: 238.52 },
+            { state: 'Alabama', totalDumped: 16050.99 },
+            { state: 'Arkansas', totalDumped: 8025.84 },
+            { state: 'Arizona', totalDumped: 6356.38 },
+            { state: 'California', totalDumped: 6652.19 },
+            { state: 'Colorado', totalDumped: 1393.13 },
+            { state: 'Connecticut', totalDumped: 133.13 },
+            { state: 'District of Columbia', totalDumped: 4.20 },
+            { state: 'Delaware', totalDumped: 3002.76 },
+            { state: 'Florida', totalDumped: 14821.31 },
+            { state: 'Georgia', totalDumped: 14985.25 },
+            { state: 'Hawaii', totalDumped: 572.96 },
+            { state: 'Iowa', totalDumped: 8164.69 },
+            { state: 'Idaho', totalDumped: 7401.59 },
+            { state: 'Illinois', totalDumped: 10144.16 },
+            { state: 'Indiana', totalDumped: 14857.65 },
+            { state: 'Kansas', totalDumped: 4896.87 },
+            { state: 'Kentucky', totalDumped: 7536.02 },
+            { state: 'Louisiana', totalDumped: 30150.42 },
+            { state: 'Massachusetts', totalDumped: 207.61 },
+            { state: 'Maryland', totalDumped: 1270.50 },
+            { state: 'Maine', totalDumped: 2036.74 },
+            { state: 'Michigan', totalDumped: 4846.75 },
+            { state: 'Minnesota', totalDumped: 3975.92 },
+            { state: 'Missouri', totalDumped: 4529.55 },
+            { state: 'Mississippi', totalDumped: 13769.65 },
+            { state: 'Montana', totalDumped: 550.45 },
+            { state: 'North Carolina', totalDumped: 10427.12 },
+            { state: 'North Dakota', totalDumped: 9614.92 },
+            { state: 'Nebraska', totalDumped: 4568.32 },
+            { state: 'New Hampshire', totalDumped: 21.48 },
+            { state: 'New Jersey', totalDumped: 2182.68 },
+            { state: 'New Mexico', totalDumped: 1309.51 },
+            { state: 'Nevada', totalDumped: 2408.45 },
+            { state: 'New York', totalDumped: 2533.69 },
+            { state: 'Ohio', totalDumped: 15640.04 },
+            { state: 'Oklahoma', totalDumped: 9991.97 },
+            { state: 'Oregon', totalDumped: 6023.79 },
+            { state: 'Pennsylvania', totalDumped: 8170.00 },
+            { state: 'Rhode Island', totalDumped: 106.78 },
+            { state: 'South Carolina', totalDumped: 7196.01 },
+            { state: 'South Dakota', totalDumped: 2993.08 },
+            { state: 'Tennessee', totalDumped: 6920.24 },
+            { state: 'Texas', totalDumped: 35649.59 },
+            { state: 'Utah', totalDumped: 6706.71 },
+            { state: 'Virginia', totalDumped: 9325.25 },
+            { state: 'Vermont', totalDumped: 75.59 },
+            { state: 'Washington', totalDumped: 4708.09 },
+            { state: 'Wisconsin', totalDumped: 4044.94 },
+            { state: 'West Virginia', totalDumped: 1985.89 },
+            { state: 'Wyoming', totalDumped: 3011.13 },
+            // Add data for other states
+        ];
+
+        // Get a reference to the canvas element
+        const ctx = document.getElementById('state-bar-chart').getContext('2d');
+
+        // Extract state names and total dumped values from the data
+        const stateNames = stateData.map(item => item.state);
+        const totalDumpedValues = stateData.map(item => item.totalDumped);
+
+        // Create the bar chart
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: stateNames, // State names as labels
+                datasets: [{
+                    label: 'Total Amount Dumped',
+                    data: totalDumpedValues, // Total dumped values as data
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Bar color
+                    borderColor: 'rgba(75, 192, 192, 1)', // Border color
+                    borderWidth: 1, // Border width
+                }],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true, // Start the Y-axis at zero
+                    },
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Total Amount per State (in tons)', // Title text
+                        fontSize: 16, // Adjust the font size as needed
+                    },
+                },
+            },
+        });
+    });
+    </script>
 </body>
 </html>
