@@ -8,7 +8,7 @@
 }
 
 #map {
-    height: 500px;
+    height: 550px;
     max-width: 85%;
     padding: 10px 10px;
     /* REFERENCED https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,not%20define%20the%20border%20style. */
@@ -108,4 +108,25 @@
 #selDataset-2 {
     width: 200px;
     padding: 3px 3px;
+}
+
+.legend {
+    color: black;
+    padding: 6px 6px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.legend ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+
+.legend li {
+    width: 180px;
+    height: 17px;
 }

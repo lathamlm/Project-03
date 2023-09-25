@@ -64,15 +64,15 @@ def location():
     location_list = []
     for DOCUMENT_NUMBER, FACILITY_NAME, PARENT_COMPANY_NAME, LATITUDE, LONGITUDE, FEDERAL_FACILITY, CARCINOGEN, ON_SITE_RELEASE_TOTAL, INDUSTRY_SECTOR_CODE in results:
         location_dict = {}
-        location_dict["Document number"] = DOCUMENT_NUMBER
-        location_dict["Facility Name"] = FACILITY_NAME
-        location_dict["Parent Company Name"] = PARENT_COMPANY_NAME
+        location_dict["DocumentNumber"] = DOCUMENT_NUMBER
+        location_dict["FacilityName"] = FACILITY_NAME
+        location_dict["ParentCompanyName"] = PARENT_COMPANY_NAME
         location_dict["Latitude"] = LATITUDE
         location_dict["Longitude"] = LONGITUDE
-        location_dict["Federal Facility"] = FEDERAL_FACILITY
+        location_dict["FederalFacility"] = FEDERAL_FACILITY
         location_dict["Carcinogen"] = CARCINOGEN
-        location_dict["On-site Release Total"] = ON_SITE_RELEASE_TOTAL
-        location_dict["Industry Sector Code"] = INDUSTRY_SECTOR_CODE
+        location_dict["On_SiteReleaseTotal"] = ON_SITE_RELEASE_TOTAL
+        location_dict["IndustrySectorCode"] = INDUSTRY_SECTOR_CODE
         location_list.append(location_dict)        
 
     # REFERENCED https://stackoverflow.com/questions/25860304/how-do-i-set-response-headers-in-flask
@@ -92,17 +92,17 @@ def values():
     tridata_list = []
     for DOCUMENT_NUMBER, REGION, TRIBAL_LAND, INDUSTRY_SECTOR_CODE, SRS_ID, METAL_CATEGORY, CARCINOGEN, ON_SITE_RELEASE_TOTAL, OFF_TOTAL_RELEASE_TOTAL, OFF_SITE_RECYCLED_TOTAL, ONE_TIME_RELEASE in results:
         tridata_dict = {}
-        tridata_dict["Document Number"] = DOCUMENT_NUMBER
+        tridata_dict["DocumentNumber"] = DOCUMENT_NUMBER
         tridata_dict["Region"] = REGION
-        tridata_dict["Tribal Land"] = TRIBAL_LAND
-        tridata_dict["Industry Sector Code"] = INDUSTRY_SECTOR_CODE
-        tridata_dict["SRS ID"] = SRS_ID
-        tridata_dict["Metal Category"] = METAL_CATEGORY
+        tridata_dict["TribalLand"] = TRIBAL_LAND
+        tridata_dict["IndustrySectorCode"] = INDUSTRY_SECTOR_CODE
+        tridata_dict["SRSID"] = SRS_ID
+        tridata_dict["MetalCategory"] = METAL_CATEGORY
         tridata_dict["Carcinogen"] = CARCINOGEN
-        tridata_dict["On-site Release Total"] = ON_SITE_RELEASE_TOTAL
-        tridata_dict["Off-site Release Total"] = OFF_TOTAL_RELEASE_TOTAL
-        tridata_dict["Off-site Recycled Total"] = OFF_SITE_RECYCLED_TOTAL
-        tridata_dict["One-time Release"] = ONE_TIME_RELEASE
+        tridata_dict["On_SiteReleaseTotal"] = ON_SITE_RELEASE_TOTAL
+        tridata_dict["Off_SiteReleaseTotal"] = OFF_TOTAL_RELEASE_TOTAL
+        tridata_dict["Off_SiteRecycledTotal"] = OFF_SITE_RECYCLED_TOTAL
+        tridata_dict["OneTimeRelease"] = ONE_TIME_RELEASE
         tridata_list.append(tridata_dict)        
 
     response = jsonify(tridata_list)
@@ -121,8 +121,8 @@ def chemicals():
     chemical_list = []
     for SRS_ID, CHEMICAL in results:
         chemical_dict = {}
-        chemical_dict["SRS ID"] = SRS_ID
-        chemical_dict["Chemical Name"] = CHEMICAL
+        chemical_dict["SRS_ID"] = SRS_ID
+        chemical_dict["ChemicalName"] = CHEMICAL
         chemical_list.append(chemical_dict)        
 
     response = jsonify(chemical_list)
@@ -141,8 +141,8 @@ def industries():
     industry_list = []
     for INDUSTRY_SECTOR_CODE, INDUSTRY_SECTOR in results:
         industry_dict = {}
-        industry_dict["Industry Sector Code"] = INDUSTRY_SECTOR_CODE
-        industry_dict["Industry Sector"] = INDUSTRY_SECTOR
+        industry_dict["IndustrySectorCode"] = INDUSTRY_SECTOR_CODE
+        industry_dict["IndustrySector"] = INDUSTRY_SECTOR
         industry_list.append(industry_dict)        
 
     response = jsonify(industry_list)
@@ -161,8 +161,8 @@ def tribes():
     tribal_list = []
     for DOCUMENT_NUMBER, TRIBAL_LAND in results:
         tribal_dict = {}
-        tribal_dict["Document Number"] = DOCUMENT_NUMBER
-        tribal_dict["Tribal Land"] = TRIBAL_LAND
+        tribal_dict["DocumentNumber"] = DOCUMENT_NUMBER
+        tribal_dict["TribalLand"] = TRIBAL_LAND
         tribal_list.append(tribal_dict)       
 
     response = jsonify(tribal_list)
