@@ -48,11 +48,16 @@
 }
 
 #chem-bubble {
-    height: 450px;
+    height: 550px;
     max-width: 85%;
     border: 2px solid black;
     margin: auto;
     box-shadow: 0 0 10px black;
+    text-align: center;
+}
+
+#chart-chem-bubble {
+    text-align: center;
 }
 
 #dump-pie {
@@ -62,12 +67,13 @@
     box-shadow: 0 0 10px black;
 }
 
-#state-bar {
-    height: 450px;
+#chart-bar {
+    height: 550px;
     max-width: 85%;
     border: 2px solid black;
     margin: auto;
     box-shadow: 0 0 10px black;
+    text-align: center;
 }
 
 .region {
