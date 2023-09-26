@@ -30,7 +30,7 @@
         <div class="row space-large"></div>
         <div class="row choices">
             <div class="dropdown region">
-                <h4>Region:
+                <h4>Region:  
                 <select id="selDataset-2" onchange="optionChanged(this.value)"></select></h4>
                 <div class="space"></div>
                 <div class="panel panel-primary">
@@ -78,6 +78,7 @@
             <!-- THE DIV THAT HOLDS THE REGION BAR CHART-->
             <div class="col-md-7">
                 <div id="state-bar"></div>
+                    <canvas id="chart-bar"></canvas>
             </div>
         </div>
         <div class="row">
@@ -100,6 +101,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- JS FILE -->
     <script src="Path/logic.js"></script>
+    <script src="Path/chart.js"></script>
     <!-- <script src="flask_app.py"></script> -->
 </body>
 </html>
