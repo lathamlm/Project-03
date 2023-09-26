@@ -1,4 +1,4 @@
-# IMPORT DEPENDENCIES
+#flask# IMPORT DEPENDENCIES
 import numpy as np
 
 import sqlalchemy
@@ -206,4 +206,4 @@ def tribes():
 #    return response
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="localhost", port=8000, debug=True)

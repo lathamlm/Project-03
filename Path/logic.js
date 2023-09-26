@@ -38,3 +38,5 @@ let map = L.map("map", {
 L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
 }).addTo(map);
+
+console.log(regionData);
