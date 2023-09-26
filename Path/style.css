@@ -8,7 +8,7 @@
 }
 
 #map {
-    height: 500px;
+    height: 550px;
     max-width: 85%;
     padding: 10px 10px;
     /* REFERENCED https://blog.hubspot.com/website/css-border#:~:text=CSS%20Border%20Not%20Showing,not%20define%20the%20border%20style. */
@@ -38,6 +38,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 500px;
 }
 /* END OF REFERENCED CODE*/
 
@@ -47,65 +48,122 @@
 }
 
 #chem-bubble {
-    height: 450px;
+    height: 550px;
     max-width: 85%;
     border: 2px solid black;
     margin: auto;
     box-shadow: 0 0 10px black;
+    text-align: center;
+}
+
+#chart-chem-bubble {
+    text-align: center;
 }
 
 #dump-pie {
-    height: 450px;
-    max-width: 85%;
+    height: 500px;
+    width: 500px;
     border: 2px solid black;
-    margin: auto;
     box-shadow: 0 0 10px black;
 }
 
-#state-bar {
-    height: 450px;
+#chart-bar {
+    height: 550px;
     max-width: 85%;
     border: 2px solid black;
     margin: auto;
     box-shadow: 0 0 10px black;
+    text-align: center;
 }
 
 .region {
     border: 1px solid darkslategrey;
     box-shadow: 0 0 8px darkslateblue;
     height: 60px;
-    width: 275px;
+    width: 340px;
     border-radius: 5px;
     padding: 10px 10px;
-    margin: 0 10px;
+    margin: 0 30px;
+    background-color: lightgrey;
 }
 
-.company {
-    border: 1px solid darkslategrey;
-    box-shadow: 0 0 8px darkslateblue;
-    height: 60px;
-    width: 450px;
-    border-radius: 5px;
-    padding: 10px 10px;
-    margin: 0 10px;
-}
-
-#selDataset-1 {
-    width: 200px;
-    padding: 3px 3px;
-}
-
-.panel {
+.panel1 {
     border: 1px solid darkslategrey;
     box-shadow: 0 0 8px darkslateblue;
     height: 100px;
-    max-width: 85%;
+    width: 340px;
     border-radius: 5px;
-    padding: 10px 10px;
-    margin: auto;
+    padding: 5px 5px;
+    margin: 5px 0;
+}
+
+.panel2 {
+    border: 1px solid darkslategrey;
+    box-shadow: 0 0 8px darkslateblue;
+    height: 100px;
+    width: 340px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 5px 0;
+}
+
+.panel3 {
+    border: 1px solid darkslategrey;
+    box-shadow: 0 0 8px darkslateblue;
+    height: 100px;
+    width: 340px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 5px 0;
 }
 
 #selDataset-2 {
     width: 200px;
     padding: 3px 3px;
 }
+
+.legend {
+    color: black;
+    padding: 6px 6px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.legend ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+
+.legend li {
+    width: 180px;
+    height: 17px;
+}
+
+
+h4 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.panel-heading ul {
+    text-align: center;
+    padding: 0 0;
+    font-size: large;
+}
+
+#facil-head {
+    color: seagreen
+}
+
+#tons-head {
+    color: slateblue
+}
+
+#carcin-head {
+    color: orange
+}
+

@@ -24,7 +24,7 @@ ____________________________________________________________
 ### KEY AREAS TO ADDRESS:
 
 1. The relationship between industry type and toxic release volume and location, with the ability to filter by carcinogen and federal companies (map)
-2. By company, comparing the unique chemical profiles released as well as the breakdown of (onsite, offsite, and recycling volumes) (dropdown/table/pie)
+2. By company, comparing the unique chemical profiles released as well as the breakdown of (onsite, offsite, and recycling volumes) (dropdown/bubble/pie)
 3. By region (including Tribal lands), comparing total release volumes, carcinogens
 
 ____________________________________________________________
