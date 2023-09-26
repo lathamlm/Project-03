@@ -29,28 +29,40 @@
         </div>
         <div class="row space-large"></div>
         <div class="row choices">
-            <div class="dropdown company">
-                <h4>Parent Company Name:
-                <select id="selDataset-1" onchange="optionChanged(this.value)"></select></h4>
-            </div>
-            <div class="space"></div>
             <div class="dropdown region">
                 <h4>Region:
-                <select id="selDataset-2" onchange="optionChangedTwo(this.value)"></select></h4>
+                <select id="selDataset-2" onchange="optionChanged(this.value)"></select></h4>
+                <div class="space"></div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading panel1">
+                        <h4 id="facil-head" class="panel-title p1">Facilities</h4>
+                        <ul id="facilities" style="list-style-type: none;"></ul>
+                    </div>
+                    <div class="space-small"></div>
+                    <div class="panel-heading panel2">
+                        <h4 id="tons-head" class="panel-title" id="p2">Total Released</h4>
+                        <ul id="tons" style="list-style-type: none;"></ul>                        
+                    </div>
+                    <div class="space-small"></div>
+                    <div class="panel-heading panel3">
+                        <h4 id="carcin-head" class="panel-title p3">Carcinogens</h4>
+                        <ul id="carcinogen" style="list-style-type: none;"></ul>                        
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <div class="space-special"></div>
+            </div>
+            <div class="col-md-6">
+                <!-- BREAKDOWN BETWEEN ON SITE, OFF SITE, RECYCLING-->
+                <div id="dump-pie">
+                    <canvas id="chart-dump-pie"></canvas>
+                </div>
+            </div>
+
         </div>
         <div class="row space"></div>
-        <div class="row table">
-            <!-- THE DIV THAT HOLDS THE CO. NAME DROPDOWN-->
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Summary:</h4>
-                </div>
-                <div id="summary-list" class="panel-body">
-                    <ul style="list-style-type: none;"></ul>
-                </div>
-            </div>
-        </div>
+        
         <div class="row space-special"></div>
         <div class="row">
             <!-- THE DIV THAT HOLDS THE CHEMICAL BUBBLE CHART-->
@@ -58,15 +70,6 @@
                 <!-- BREAKDOWN BETWEEN ON SITE, OFF SITE, RECYCLING-->
                 <div id="chem-bubble">
                     <canvas id="chart-chem-bubble"></canvas>
-                </div>
-            </div>
-        </div>
-        <div class="row space-special"></div>
-        <div class="row">
-            <div class="col-md-6">
-                <!-- BREAKDOWN BETWEEN ON SITE, OFF SITE, RECYCLING-->
-                <div id="dump-pie">
-                    <canvas id="chart-dump-pie"></canvas>
                 </div>
             </div>
         </div>
@@ -93,6 +96,8 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- JS FILE -->
     <script src="Path/logic.js"></script>
     <!-- <script src="flask_app.py"></script> -->

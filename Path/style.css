@@ -38,6 +38,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 500px;
 }
 /* END OF REFERENCED CODE*/
 
@@ -55,10 +56,9 @@
 }
 
 #dump-pie {
-    height: 450px;
-    max-width: 85%;
+    height: 500px;
+    width: 500px;
     border: 2px solid black;
-    margin: auto;
     box-shadow: 0 0 10px black;
 }
 
@@ -74,35 +74,41 @@
     border: 1px solid darkslategrey;
     box-shadow: 0 0 8px darkslateblue;
     height: 60px;
-    width: 275px;
+    width: 340px;
     border-radius: 5px;
     padding: 10px 10px;
-    margin: 0 10px;
+    margin: 0 30px;
+    background-color: lightgrey;
 }
 
-.company {
-    border: 1px solid darkslategrey;
-    box-shadow: 0 0 8px darkslateblue;
-    height: 60px;
-    width: 450px;
-    border-radius: 5px;
-    padding: 10px 10px;
-    margin: 0 10px;
-}
-
-#selDataset-1 {
-    width: 200px;
-    padding: 3px 3px;
-}
-
-.panel {
+.panel1 {
     border: 1px solid darkslategrey;
     box-shadow: 0 0 8px darkslateblue;
     height: 100px;
-    max-width: 85%;
+    width: 340px;
     border-radius: 5px;
-    padding: 10px 10px;
-    margin: auto;
+    padding: 5px 5px;
+    margin: 5px 0;
+}
+
+.panel2 {
+    border: 1px solid darkslategrey;
+    box-shadow: 0 0 8px darkslateblue;
+    height: 100px;
+    width: 340px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 5px 0;
+}
+
+.panel3 {
+    border: 1px solid darkslategrey;
+    box-shadow: 0 0 8px darkslateblue;
+    height: 100px;
+    width: 340px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 5px 0;
 }
 
 #selDataset-2 {
@@ -130,3 +136,28 @@
     width: 180px;
     height: 17px;
 }
+
+
+h4 {
+    font-size: large;
+    font-weight: bold;
+}
+
+.panel-heading ul {
+    text-align: center;
+    padding: 0 0;
+    font-size: large;
+}
+
+#facil-head {
+    color: seagreen
+}
+
+#tons-head {
+    color: slateblue
+}
+
+#carcin-head {
+    color: orange
+}
+

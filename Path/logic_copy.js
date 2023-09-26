@@ -22,141 +22,24 @@ d3.select("#carcinogen").append("li").text(Math.round((regionData[0].Carcinogen_
 
 
 function init() {
-    // PIE GRAPH //
-    let data = {
-        labels: [
-            'On-Site Release',
-            'Off-Site Release',
-            'Recycling'
-        ],
-        datasets: [{
-            label: 'Toxic Release Categories',
-            data: [regionData[0].On_site_region, regionData[0].Off_site, regionData[0].Recycling],
-            backgroundColor: [
-            'rgb(238, 175, 97)',
-            'rgb(238, 93, 108)',
-            'rgb(59, 214, 198)'
-            ],
-            hoverOffset: 4
-        }]
-    };
-
-
-    let pieChart = new Chart(
-        document.getElementById("chart-dump-pie").getContext('2d'),
-        {
-            type: 'pie',
-            data: data,
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: "Toxic Releases (in tons)",
-                        fontSize: 20,
-                    }
-                }
-            }
-
-        }
-    )
-
-
-    /*let pieData = {
-        values: [regionData[0].On_site_region, regionData[0].Off_site, regionData[0].Recycling],
+    let pieData = {
+        values: [regionData[0].On_site_region, regionData[0].Off_site, regionDate[0].Recycling],
         labels: ["On-Site Releases", "Off-Site Releases", "Off-Site Recycling"],
         type: "pie"
     };
-    let data1 = [pieData];
 
     let pieLayout = {
         height: 450,
         width: 450
     }
 
-    Plotly.newPlot("chart-pie", data1, pieLayout);*/
+    pieChart.destroy()
+    Plotly.newPlot("chart-chem-bubble", pieData, pieLayout)
 }
-//pieChart.destroy()
-//}
 
 init();
 
-//addEventListener("click", (event) => {})
-/*let pieData = {
-    labels: [
-        'On-Site Release',
-        'Off-Site Release',
-        'Recycling'
-    ],
-    datasets: [{
-        label: 'Toxic Release Categories',
-        data: [regionData[0].On_site_region, regionData[0].Off_site, regionData[0].Recycling],
-        backgroundColor: [
-        'rgb(238, 175, 97)',
-        'rgb(238, 93, 108)',
-        'rgb(59, 214, 198)'
-        ],
-        hoverOffset: 4
-    }]
-};
 
-let pieChart = new Chart(
-    document.getElementById("chart-dump-pie").getContext('2d'),
-    {
-        type: 'pie',
-        data: pieData,
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: "Toxic Releases (in tons)",
-                    fontSize: 20,
-                }
-            }
-        }
-
-    }
-)
-let bubbleData = {
-    datasests: [{
-        data: [{
-            x: 5,
-            y: 6,
-            r: 3
-        },{
-            x: 3,
-            y: 7,
-            r: 5    
-        }]
-    }]
-};
-
-new Chart(
-    document.getElementById("chart-chem-bubble").getContext('2d'),
-    {
-        type: 'bubble',
-        data: bubbleData,
-        options: {
-          /*responsive: true,
-          plugins: {
-            legend: {
-              position: 'top',
-            },
-            title: {
-              display: true,
-              text: 'Toxic Releases by Chemicals'
-            }
-          }
-        }, 
-    }
-)*/
 
 function optionChanged(chosenId) {
 
@@ -250,7 +133,7 @@ function optionChanged(chosenId) {
 
 
 
-d3.json(locationUrl + "location").then(function(data) {
+/*d3.json(locationUrl + "location").then(function(data) {
     console.log("location:", data[0])
 
     // ------------------------------MAP---------------------------------
@@ -395,5 +278,5 @@ d3.json(locationUrl + "location").then(function(data) {
     console.log("Federal Facilities: ", federalMarkers.length)
     // ------------------------------END MAP----------------------------------
 
-});
+});*/
 
