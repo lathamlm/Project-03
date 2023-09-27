@@ -128,7 +128,7 @@ d3.json(locationUrl + "location").then(function(data) {
                 fillColor: getColor(data[i].IndustrySectorCode),
                 radius: 6,
             }).bindPopup("<strong>Facility Name: " + data[i].FacilityName + "</strong><br />Parent Company Name: " + data[i].ParentCompanyName + "<br />Coordinates: (" + data[i].Latitude
-            + ", " + data[i].Longitude + "<br />Volume Released (tons): " + parseInt(data[i].On_SiteReleaseTotal))
+            + ", " + data[i].Longitude + ")<br />Volume Released (tons): " + parseInt(data[i].On_SiteReleaseTotal))
         )
         
         // CARCINOGENS MARKERS
@@ -145,7 +145,7 @@ d3.json(locationUrl + "location").then(function(data) {
                     fillColor: getColor(data[i].IndustrySectorCode),
                     radius: 6,
                 }).bindPopup("<strong>Facility Name: " + data[i].FacilityName + "</strong><br />Parent Company Name: " + data[i].ParentCompanyName + "<br />Coordinates: (" + data[i].Latitude
-                + ", " + data[i].Longitude + "<br />Volume Released (tons): " + parseInt(data[i].On_SiteReleaseTotal))
+                + ", " + data[i].Longitude + ")<br />Volume Released (tons): " + parseInt(data[i].On_SiteReleaseTotal))
                 )
         }
 
@@ -163,7 +163,7 @@ d3.json(locationUrl + "location").then(function(data) {
                     fillColor: getColor(data[i].IndustrySectorCode),
                     radius: 6,
                 }).bindPopup("<strong>Facility Name: " + data[i].FacilityName + "</strong><br />Parent Company Name: " + data[i].ParentCompanyName + "<br />Coordinates: (" + data[i].Latitude
-                + ", " + data[i].Longitude + "<br />Volume Released (tons): " + parseInt(data[i].On_SiteReleaseTotal))
+                + ", " + data[i].Longitude + ")<br />Volume Released (tons): " + parseInt(data[i].On_SiteReleaseTotal))
             )
         }
    }
